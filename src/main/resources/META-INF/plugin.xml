@@ -1,16 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.polimerconsumer.greetme</id>
-    <name>greet-me Template</name>
+    <name>Greet-Me</name>
     <vendor>polimer-consumer</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.polimerconsumer.greetme.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+    <actions>
+        <action id="com.github.polimerconsumer.greetme.actions.GreetAction"
+                class="com.github.polimerconsumer.greetme.actions.GreetAction" text="Greet-Me"
+                description="Actions which greets user">
+            <add-to-group group-id="SearchEverywhereActions" anchor="first"/>
+        </action>
+    </actions>
 
     <applicationListeners>
         <listener class="com.github.polimerconsumer.greetme.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
