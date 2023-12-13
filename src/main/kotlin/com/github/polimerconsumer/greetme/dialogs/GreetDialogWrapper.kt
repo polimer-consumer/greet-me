@@ -21,8 +21,8 @@ class GreetDialogWrapper(project: Project?) : DialogWrapper(project) {
     override fun createCenterPanel(): JComponent {
         val dialogPanel = JPanel(BorderLayout())
 
-        val label = JLabel("Testing")
-        label.preferredSize = Dimension(100, 100)
+        val label = JLabel("Hello world")
+        label.preferredSize = Dimension(500, 500)
         dialogPanel.add(label, BorderLayout.CENTER)
 
         return dialogPanel
