@@ -1,6 +1,9 @@
 <idea-plugin>
     <id>com.github.polimerconsumer.greetme</id>
     <name>Greet-Me</name>
+    <description><![CDATA[
+        Greets user with default hello world (it is not a lot, but the honest work).]]>
+    </description>
     <vendor>polimer-consumer</vendor>
 
     <depends>com.intellij.modules.platform</depends>
