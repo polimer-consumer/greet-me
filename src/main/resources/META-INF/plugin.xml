@@ -7,7 +7,6 @@
     <vendor>polimer-consumer</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <resource-bundle>messages.MyBundle</resource-bundle>
 
     <actions>
         <action id="com.github.polimerconsumer.greetme.actions.GreetAction"
