@@ -1,8 +1,10 @@
 package com.github.polimerconsumer.greetme.actions
 
 import com.github.polimerconsumer.greetme.dialogs.GreetDialogWrapper
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.ui.Messages
 
 class GreetAction : AnAction() {
@@ -20,6 +22,16 @@ class GreetAction : AnAction() {
         } else {
             Messages.showMessageDialog(actionEvent.project, "Hello, anonymous", "Greet Me", Messages.getInformationIcon())
         }
+    }
+
+    override fun update(actionEvent: AnActionEvent) {
+        val presentation = actionEvent.presentation
+        val project = actionEvent.getData(CommonDataKeys.PROJECT)
+        presentation.isEnabledAndVisible = project != null
+    }
+
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.EDT
     }
 //    override fun actionPerformed(actionEvent: AnActionEvent) {
 //        // val greetDialogWindow = GreetDialogWrapper(actionEvent.project)
