@@ -14,7 +14,7 @@ way to create simple dialog windows.
 
 ## Installation
 
-Clone the repository, run <kbd>Plugins</kbd> > <kbd>Build Project</kbd>.
+Clone the repository, run *./gradlew build*.
 Go into *build/distributions* and install it manually from this folder using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
