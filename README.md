@@ -3,7 +3,13 @@
 ![Build](https://github.com/polimer-consumer/greet-me/workflows/Build/badge.svg)
 
 <!-- Plugin description -->
-**This plugin can greet you if you feel alone during coding😊.** 
+**This plugin can greet you if you feel alone during coding😊.**
+
+I also played with CI/CD process during this plugin development, so it may seem a bit overcomplicated,
+but it helped me a lot with understanding Github Actions :)
+
+Oh, and also there is a custom  dialog wrapper I wrote, but I don't use it now as there is an easier
+way to create simple dialog windows. 
 <!-- Plugin description end -->
 
 ## Installation
