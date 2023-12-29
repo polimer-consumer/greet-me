@@ -1,11 +1,11 @@
 package com.github.polimerconsumer.greetme.actions
 
-import com.github.polimerconsumer.greetme.dialogs.GreetDialogWrapper
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
+
 
 class GreetAction : AnAction() {
     override fun actionPerformed(actionEvent: AnActionEvent) {
@@ -25,13 +25,12 @@ class GreetAction : AnAction() {
     }
 
     override fun update(actionEvent: AnActionEvent) {
-        val presentation = actionEvent.presentation
-        val project = actionEvent.getData(CommonDataKeys.PROJECT)
-        presentation.isEnabledAndVisible = project != null
+        val project: Project? = actionEvent.project
+        actionEvent.presentation.isEnabledAndVisible = project != null
     }
 
     override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.EDT
+        return ActionUpdateThread.BGT
     }
 //    override fun actionPerformed(actionEvent: AnActionEvent) {
 //        // val greetDialogWindow = GreetDialogWrapper(actionEvent.project)
